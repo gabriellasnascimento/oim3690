@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Me | Gabriella</title>
+
+  <style>
+    :root{
+      --accent:#ff7aa8;      /* soft pink */
+      --accent2:#7dd3fc;     /* light blue */
+      --bg:#fffafc;
+      --text:#222;
+      --muted:#5b5b5b;
+      --card:#ffffff;
+      --border:rgba(0,0,0,0.08);
+    }
+    *{ box-sizing:border-box; }
+    body{
+      font-family:-apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+      margin:0;
+      padding:2rem;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.45;
+    }
+    .container{ max-width:980px; margin:0 auto; }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      flex-wrap:wrap;
+      padding:1rem 1.25rem;
+      background:linear-gradient(135deg, rgba(255,122,168,0.15), rgba(125,211,252,0.15));
+      border:1px solid var(--border);
+      border-radius:14px;
+    }
+    .head-left{ display:flex; align-items:center; gap:1rem; }
+    .badge{
+      width:56px; height:56px;
+      border-radius:50%;
+      background:var(--accent);
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-weight:800;
+      letter-spacing:0.5px;
+      flex:0 0 auto;
+    }
+    h1{ margin:0; font-size:1.35rem; color:#7b2141; }
+    .subtitle{ margin:0.2rem 0 0; color:var(--muted); }
+
+    nav a{
+      color:#c2185b;
+      text-decoration:none;
+      margin:0 8px;
+      font-weight:600;
+    }
+    nav a:hover{ text-decoration:underline; }
+
+    main{ margin-top:1.25rem; display:grid; gap:1rem; }
+    @media (min-width: 840px){
+      main{ grid-template-columns: 1.3fr 0.7fr; }
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:1rem 1.25rem;
+      box-shadow:0 10px 25px rgba(0,0,0,0.04);
+    }
+    .card h2{
+      margin:0 0 0.5rem;
+      font-size:1.05rem;
+      color:#7b2141;
+    }
+    .pill-row{ display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:0.75rem; }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:0.4rem;
+      padding:0.35rem 0.6rem;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(125,211,252,0.12);
+      font-size:0.92rem;
+    }
+    .pill strong{ color:#7b2141; }
+
+    ul{ margin:0.5rem 0 0 1.2rem; }
+    .muted{ color:var(--muted); }
+
+    /* Media section */
+    .media-wrap{ margin-top:1rem; }
+    .youtube-player{
+      position:relative;
+      padding-top:56.25%;
+      overflow:hidden;
+      cursor:pointer;
+      background:#000;
+      border-radius:12px;
+      border:1px solid var(--border);
+    }
+    .footer-note{
+      margin-top:0.75rem;
+      font-size:0.9rem;
+      color:var(--muted);
+    }
+    .small{ font-size:0.9rem; }
+    .linkish{ color:#c2185b; font-weight:600; }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="head-left">
+        <div class="badge" aria-hidden="true">GN</div>
+        <div>
+          <h1 id="top">About Me</h1>
+          <p class="subtitle">Hi, I’m Gabriella — Babson College student focused on entrepreneurship, legal studies, and finance.</p>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#top">Home</a> |
+        <a href="#favourites">Favourites</a> |
+        <a href="#about">About</a> |
+        <a href="#media">Media</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Left column -->
+      <div class="card">
+        <section id="about" aria-labelledby="about-heading">
+          <h2 id="about-heading">About Me</h2>
+          <p>
+            I’m a Babson College undergrad studying Business with a concentration in Legal Studies.
+            I’m especially interested in building businesses (fashion + social impact), while also exploring
+            wealth management and strategy.
+          </p>
+          <p class="muted">
+            Outside classes, I’m involved in projects that combine entrepreneurship, leadership, and community impact —
+            including the NEVE scholarship initiative and other student ventures.
+          </p>
+
+          <div class="pill-row" aria-label="Quick facts">
+            <span class="pill"><strong>Focus:</strong> Entrepreneurship</span>
+            <span class="pill"><strong>Also:</strong> Legal Studies</span>
+            <span class="pill"><strong>Interest:</strong> Wealth Management</span>
+            <span class="pill"><strong>Style:</strong> Organized + creative</span>
+          </div>
+        </section>
+      </div>
+
+      <!-- Right column -->
+      <div class="card">
+        <section id="favourites" aria-labelledby="favourites-heading">
+          <h2 id="favourites-heading">Favourites</h2>
+          <p>My favourite colour is <strong>pink</strong> (soft, clean aesthetic).</p>
+
+          <p class="small">Things I love:</p>
+          <ul>
+            <li>Travelling (Boston ⇄ Rio ⇄ Miami ⇄ Europe)</li>
+            <li>Building projects + presenting ideas</li>
+            <li>Fashion + entrepreneurship</li>
+            <li>Small dogs (currently dreaming of a tiny toy poodle 🐾)</li>
+          </ul>
+
+          <p class="footer-note">
+            Tip: you can customize colours at the top in <span class="linkish">:root</span>.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <div class="card media-wrap">
+      <section id="media" aria-labelledby="media-heading">
+        <h2 id="media-heading">Media</h2>
+        <p class="muted">Click the thumbnail to load the YouTube player (works even if embeds are blocked).</p>
+
+        <div style="max-width:780px;margin:0 auto;">
+          <!-- Change the video id below to anything you want -->
+          <div class="youtube-player" data-id="dQw4w9WgXcQ" aria-label="YouTube video player preview"></div>
+
+          <noscript>
+            <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </noscript>
+        </div>
+
+        <h3 style="margin-top:1rem;">Local audio</h3>
+        <p class="muted small">
+          If you have an mp3 file in your folder, put it in <code>audio/</code> and update the filename below.
+        </p>
+
+        <audio controls style="width:100%;max-width:780px;">
+          <source src="audio/your-audio-file.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <p class="footer-note">
+          If your audio doesn’t play, double-check the file name (including spaces) and the folder path.
+        </p>
+
+        <script>
+          // Lazy-load YouTube iframe: show thumbnail + play overlay, replace with iframe on click
+          (function () {
+            function createPlayer(div) {
+              var id = div.dataset.id;
+              var thumb = "https://i.ytimg.com/vi/" + id + "/hqdefault.jpg";
+
+              var img = document.createElement("img");
+              img.src = thumb;
+              img.alt = "YouTube thumbnail";
+              img.style.width = "100%";
+              img.style.height = "100%";
+              img.style.objectFit = "cover";
+              img.loading = "lazy";
+
+              var overlay = document.createElement("div");
+              overlay.style.position = "absolute";
+              overlay.style.inset = "0";
+              overlay.style.display = "flex";
+              overlay.style.alignItems = "center";
+              overlay.style.justifyContent = "center";
+              overlay.style.background = "linear-gradient(0deg, rgba(0,0,0,0.20), rgba(0,0,0,0.05))";
+
+              var btn = document.createElement("button");
+              btn.type = "button";
+              btn.setAttribute("aria-label", "Play video");
+              btn.style.width = "84px";
+              btn.style.height = "84px";
+              btn.style.border = "0";
+              btn.style.borderRadius = "50%";
+              btn.style.background = "rgba(0,0,0,0.55)";
+              btn.style.display = "flex";
+              btn.style.alignItems = "center";
+              btn.style.justifyContent = "center";
+              btn.style.cursor = "pointer";
+
+              var tri = document.createElement("div");
+              tri.style.width = "0";
+              tri.style.height = "0";
+              tri.style.borderLeft = "18px solid #fff";
+              tri.style.borderTop = "12px solid transparent";
+              tri.style.borderBottom = "12px solid transparent";
+              tri.style.marginLeft = "4px";
+
+              btn.appendChild(tri);
+              overlay.appendChild(btn);
+
+              div.appendChild(img);
+              div.appendChild(overlay);
+
+              div.addEventListener("click", function () {
+                var iframe = document.createElement("iframe");
+                iframe.setAttribute(
+                  "src",
+                  "https://www.youtube-nocookie.com/embed/" + id + "?rel=0&showinfo=0&autoplay=1"
+                );
+                iframe.setAttribute("title", "YouTube video player");
+                iframe.setAttribute("frameborder", "0");
+                iframe.setAttribute(
+                  "allow",
+                  "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                );
+                iframe.setAttribute("allowfullscreen", "");
+                iframe.style.width = "100%";
+                iframe.style.height = "100%";
+                iframe.style.position = "absolute";
+                iframe.style.inset = "0";
+
+                div.innerHTML = "";
+                div.appendChild(iframe);
+              });
+            }
+
+            document.addEventListener("DOMContentLoaded", function () {
+              var players = document.getElementsByClassName("youtube-player");
+              for (var i = 0; i < players.length; i++) createPlayer(players[i]);
+            });
+          })();
+        </script>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
