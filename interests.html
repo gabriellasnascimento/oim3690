@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Interests</title>
+
+    <style>
+        :root {
+            --accent: #e89ab0;
+            --soft: #fff5f8;
+            --text-dark: #5c1f2f;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 2rem;
+            background: var(--soft);
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .interest-card {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .interest-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .interest-title {
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .interest-description {
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .home-link {
+            display: block;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-decoration: none;
+            color: var(--accent);
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a class="home-link" href="index.html">← Back to Home</a>
+
+    <div class="container">
+        <h1>My Interests</h1>
+
+        <div class="interest-card">
+            <div class="interest-title">Entrepreneurship & Innovation</div>
+            <div class="interest-description">
+                I am passionate about building ventures that solve real problems. From dorm-life products to 
+                sustainable initiatives, I love turning ideas into scalable solutions that create impact.
+            </div>
+        </div>
+
+        <div class="interest-card">
+            <div class="interest-title">Wealth Management & Finance</div>
+            <div class="interest-description">
+                I am deeply interested in wealth strategy, family offices, IPO processes, and long-term value creation. 
+                I enjoy analyzing financial structures and understanding how capital shapes industries.
+            </div>
+        </div>
+
+        <div class="interest-card">
+            <div class="interest-title">Law & Corporate Strategy</div>
+            <div class="interest-description">
+                Legal frameworks and corporate governance fascinate me. I am especially interested in the intersection 
+                of business law, entrepreneurship, and strategic growth.
+            </div>
+        </div>
+
+        <div class="interest-card">
+            <div class="interest-title">STEM Education & Social Impact</div>
+            <div class="interest-description">
+                Through the NEVE Project and other initiatives, I am committed to expanding access to education 
+                and empowering underprivileged youth through STEM opportunities.
+            </div>
+        </div>
+
+        <div class="interest-card">
+            <div class="interest-title">Global Perspective</div>
+            <div class="interest-description">
+                Living between Brazil, the U.S., and Europe has shaped my global mindset. 
+                I value cross-cultural experiences and international collaboration.
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 Gabriella Suarez Nascimento
+    </footer>
+
+</body>
+</html>
