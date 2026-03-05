@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Cards</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-50 text-slate-900">
+  <main class="mx-auto max-w-6xl px-4 py-10">
+    <header class="mb-8">
+      <h1 class="text-3xl font-extrabold tracking-tight">Responsive Profile Cards</h1>
+      <p class="mt-2 text-slate-600">Cards reflow on different screen sizes.</p>
+    </header>
+
+    <!-- 1 col on mobile, 2 on md, 3 on lg -->
+    <section class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Gabriella -->
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <div class="flex items-center gap-4">
+          <div class="h-12 w-12 rounded-full bg-pink-200"></div>
+          <div>
+            <h2 class="text-lg font-bold">Gabriella Nascimento</h2>
+            <p class="text-sm text-slate-600">OIM3690 • Student</p>
+          </div>
+        </div>
+        <p class="mt-4 text-slate-700">
+          Working on responsive layouts, forms, and clean page structure using HTML and CSS.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold">HTML</span>
+          <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold">CSS</span>
+          <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold">Responsive</span>
+        </div>
+      </article>
+
+      <!-- Joana -->
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <div class="flex items-center gap-4">
+          <div class="h-12 w-12 rounded-full bg-blue-200"></div>
+          <div>
+            <h2 class="text-lg font-bold">Joana Barichello</h2>
+            <p class="text-sm text-slate-600">Team Member</p>
+          </div>
+        </div>
+        <p class="mt-4 text-slate-700">
+          Focused on organizing content clearly and making layouts look good on any screen size.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold">Layout</span>
+          <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold">Typography</span>
+          <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold">UX</span>
+        </div>
+      </article>
+
+      <!-- Lexie -->
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <div class="flex items-center gap-4">
+          <div class="h-12 w-12 rounded-full bg-green-200"></div>
+          <div>
+            <h2 class="text-lg font-bold">Lexie Collier</h2>
+            <p class="text-sm text-slate-600">Team Member</p>
+          </div>
+        </div>
+        <p class="mt-4 text-slate-700">
+          Practicing responsive design with breakpoints and using Tailwind classes to speed up styling.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold">Tailwind</span>
+          <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold">Grid</span>
+          <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold">Breakpoints</span>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
