@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Daily Todo List</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f4f1;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 650px;
+      background: white;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      margin-top: 0;
+      text-align: center;
+      color: #5c4033;
+    }
+
+    p {
+      text-align: center;
+      color: #7a6a5f;
+      margin-bottom: 25px;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    input {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid #d8cfc7;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px 18px;
+      border: none;
+      border-radius: 10px;
+      background: #8b5e3c;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #714b30;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      background: #faf7f4;
+      border: 1px solid #eee3da;
+      padding: 14px 16px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .task-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .task-text {
+      font-size: 16px;
+    }
+
+    .completed .task-text {
+      text-decoration: line-through;
+      color: #999;
+    }
+
+    .delete-btn {
+      background: #d96c6c;
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+
+    .delete-btn:hover {
+      background: #bb5555;
+    }
+
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      color: #8a7b70;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .input-group {
+        flex-direction: column;
+      }
+
+      button {
+        width: 100%;
+      }
+
+      li {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .delete-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My Daily Todo List</h1>
+    <p>Stay on track ✨</p>
+
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Add a new task..." />
+      <button id="addTaskBtn">Add</button>
+    </div>
+
+    <ul id="taskList">
+      <li>
+        <div class="task-left">
+          <input type="checkbox" />
+          <span class="task-text">Study for TOM</span>
+        </div>
+        <button class="delete-btn">Delete</button>
+      </li>
+
+      <li>
+        <div class="task-left">
+          <input type="checkbox" />
+          <span class="task-text">Go to the gym</span>
+        </div>
+        <button class="delete-btn">Delete</button>
+      </li>
+
+      <li>
+        <div class="task-left">
+          <input type="checkbox" />
+          <span class="task-text">Do groceries</span>
+        </div>
+        <button class="delete-btn">Delete</button>
+      </li>
+
+      <li>
+        <div class="task-left">
+          <input type="checkbox" />
+          <span class="task-text">Unpack and organize room</span>
+        </div>
+        <button class="delete-btn">Delete</button>
+      </li>
+
+      <li>
+        <div class="task-left">
+          <input type="checkbox" />
+          <span class="task-text">Answer emails</span>
+        </div>
+        <button class="delete-btn">Delete</button>
+      </li>
+
+      <li>
+        <div class="task-left">
+          <input type="checkbox" />
+          <span class="task-text">Work on homework</span>
+        </div>
+        <button class="delete-btn">Delete</button>
+      </li>
+
+      <li>
+        <div class="task-left">
+          <input type="checkbox" />
+          <span class="task-text">Drink more water</span>
+        </div>
+        <button class="delete-btn">Delete</button>
+      </li>
+
+      <li>
+        <div class="task-left">
+          <input type="checkbox" />
+          <span class="task-text">Call family</span>
+        </div>
+        <button class="delete-btn">Delete</button>
+      </li>
+    </ul>
+
+    <div class="footer">
+      You’ve got this.
+    </div>
+  </div>
+
+  <script>
+    const taskInput = document.getElementById("taskInput");
+    const addTaskBtn = document.getElementById("addTaskBtn");
+    const taskList = document.getElementById("taskList");
+
+    function attachTaskEvents(taskItem) {
+      const checkbox = taskItem.querySelector('input[type="checkbox"]');
+      const deleteBtn = taskItem.querySelector(".delete-btn");
+
+      checkbox.addEventListener("change", function () {
+        taskItem.classList.toggle("completed", checkbox.checked);
+      });
+
+      deleteBtn.addEventListener("click", function () {
+        taskItem.remove();
+      });
+    }
+
+    function createTask(taskText) {
+      const li = document.createElement("li");
+
+      li.innerHTML = `
+        <div class="task-left">
+          <input type="checkbox" />
+          <span class="task-text"></span>
+        </div>
+        <button class="delete-btn">Delete</button>
+      `;
+
+      li.querySelector(".task-text").textContent = taskText;
+      attachTaskEvents(li);
+      taskList.appendChild(li);
+    }
+
+    addTaskBtn.addEventListener("click", function () {
+      const taskText = taskInput.value.trim();
+
+      if (taskText !== "") {
+        createTask(taskText);
+        taskInput.value = "";
+      }
+    });
+
+    taskInput.addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        addTaskBtn.click();
+      }
+    });
+
+    document.querySelectorAll("#taskList li").forEach(attachTaskEvents);
+  </script>
+</body>
+</html>
