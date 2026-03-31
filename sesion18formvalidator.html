@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Grade Calculator</title>
+<title>Form Validator</title>
 </head>
 
 <body>
 
-<h2>Grade Calculator</h2>
+<h2>Validated Grade Calculator</h2>
 
 <input id="score" type="number" placeholder="Enter score">
-<button id="calculate">Calculate Grade</button>
+<button id="calculate">Calculate</button>
 
 <p id="result"></p>
 
@@ -27,12 +27,33 @@ document.getElementById("calculate").addEventListener("click", function () {
   const input = document.getElementById("score").value;
   const result = document.getElementById("result");
 
-  const score = Number(input);
-  const grade = getGrade(score);
+  // ❗ Validation
+  if (input === "") {
+    result.textContent = "Please enter a score";
+    result.style.color = "black";
+    return;
+  }
 
+  const score = Number(input);
+
+  if (score < 0 || score > 100) {
+    result.textContent = "Score must be 0-100";
+    result.style.color = "black";
+    return;
+  }
+
+  // ✅ If valid
+  const grade = getGrade(score);
   result.textContent = Grade: ${grade};
+
+  // 🎨 Bonus color
+  if (grade === "A" || grade === "B") {
+    result.style.color = "green";
+  } else {
+    result.style.color = "red";
+  }
 });
 </script>
 
 </body>
-</html
+</html>

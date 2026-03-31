@@ -1,0 +1,30 @@
+<html lang="en">
+<body>
+
+<script>
+document
+  .getElementById("calculate")
+  .addEventListener("click", function () {
+
+    const nameInput = document.getElementById("name").value;
+    const priceInput = document.getElementById("price").value;
+    const taxInput = document.getElementById("tax").value;
+    const totalOutput = document.getElementById("total");
+
+    console.log(typeof priceInput); // type before parsing
+    console.log(typeof taxInput);
+
+    const price = parseFloat(priceInput);
+    const tax = parseFloat(taxInput);
+
+    console.log(typeof price); // type after parsing
+    console.log(typeof tax);
+
+    const total = price + tax;
+
+    totalOutput.textContent = Hello, ${nameInput}! Total: $${total.toFixed(2)};
+  });
+</script>
+
+</body>
+</html>
