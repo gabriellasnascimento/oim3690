@@ -24,3 +24,4 @@
 - I tested examples using fetch() to request data and display it on the page.
 - I compared the .then() method with async/await to better understand both approaches.
 - I also explored basic animation techniques in JavaScript using timing functions.
+- I fixed an issued on my grade-calculator.html code 

@@ -1,4 +1,2 @@
 ## session 22
-## what i learned 
-## What I did
-
+- We had our third and last quiz!!!
