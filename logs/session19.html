@@ -1,0 +1,24 @@
+<form id="contactForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" required>
+
+  <button type="submit">Submit</button>
+</form>
+
+<p id="message"></p>
+
+<script>
+  const form = document.getElementById("contactForm");
+  const nameInput = document.getElementById("name");
+  const message = document.getElementById("message");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    if (nameInput.value.trim() === "") {
+      message.textContent = "Please enter your name.";
+    } else {
+      message.textContent = "Hello, " + nameInput.value + "!";
+    }
+  });
+</script>

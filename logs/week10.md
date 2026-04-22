@@ -19,5 +19,14 @@
 
 ## session 19
 ## what i learned 
+- I learned more about how JavaScript can respond to user actions and make a webpage interactive.
+- I got a better understanding of how forms collect information from users and how that data can be used in a website.
+- I learned why event.preventDefault() is important when working with forms, since it stops the page from reloading after submission.
+- I practiced basic form validation to make sure users fill out inputs correctly.
+- I also reinforced how HTML, CSS, and JavaScript work together to build a complete interactive web page.
 
 ## What I did
+- I practiced adding event listeners to forms and buttons.
+- I worked on taking user input and showing the result directly on the page.
+- I tested simple validation rules and fixed errors in my code.
+- I continued improving my project by making the form section more interactive and user-friendly.
